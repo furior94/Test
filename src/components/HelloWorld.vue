@@ -1,32 +1,88 @@
 <template>
+  <div class="small">
+    <pie-chart :chartData="datacollection"></pie-chart>
+    <!-- <chartjs-pie :labels="labels" :data="dataset" :bind="true"></chartjs-pie> -->
+    <button @click="fillData()">Randomize</button>
+  </div>
 </template>
 
 <script>
-  //import VueCharts from 'vue-chartjs'
-  //import { Bar, Line } from 'vue-chartjs'
-
-// CommitChart.js
-import { Bar } from 'vue-chartjs'
-
+import PieChart from "./PieChart.js"
 export default {
   components: {
-    Bar
+    PieChart
+  },
+  data () {
+    return {
+      datacolletion: 0
+    }
   },
   mounted () {
-    // Overwriting base render method with actual data.
-    this.renderChart({
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      datasets: [
+    this.fillData()
+  },
+  methods: {
+    fillData () {
+      this.datacolletion = {
+        labels: ["qwe","asd","zxc"],
+        datasets: [
         {
-          label: 'GitHub Commits',
+          label: "hola",
           backgroundColor: '#f87979',
-          data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
+          data: [this.getRandomInt(), 45, this.getRandomInt()]
+        },
+        {
+          label: 'feo',
+          backgroundColor: '#f83000',
+          data: [this.getRandomInt(), this.getRandomInt(),this.getRandomInt()]
         }
-      ]
-    })
+        ]
+      }
+    },
+    getRandomInt () {
+      return Math.floor(Math.random() * (50 - 5 + 1)) + 5
+    }
   }
 }
+  // import LineChart from './LineChart.js'
+  // export default {
+  //   components: {
+  //     LineChart
+  //   },
+  //   data () {
+  //     return {
+  //       datacollection: null
+  //     }
+  //   },
+  //   mounted () {
+  //     this.fillData()
+  //   },
+  //   methods: {
+  //     fillData () {
+  //       this.datacollection = {
+  //         labels: [this.getRandomInt(), this.getRandomInt(),"asd"],
+  //         datasets: [
+  //           {
+  //             label: 'Data One',
+  //             backgroundColor: '#f87979',
+  //             data: [this.getRandomInt(), 45, this.getRandomInt()]
+  //           }, {
+  //             label: 'Data One',
+  //             backgroundColor: '#f83000',
+  //             data: [this.getRandomInt(), this.getRandomInt(),this.getRandomInt()]
+  //           }
+  //         ]
+  //       }
+  //     },
+  //     getRandomInt () {
+  //       return Math.floor(Math.random() * (50 - 5 + 1)) + 5
+  //     }
+  //   }
+  // }
 </script>
 
-<style scoped>
+<style>
+  /* .small {
+    max-width: 600px;
+    margin:  150px auto;
+  } */
 </style>
