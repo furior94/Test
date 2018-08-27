@@ -14,7 +14,7 @@ export default {
   },
   data () {
     return {
-      datacolletion: 0
+      datacollection: 0
     }
   },
   mounted () {
@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     fillData () {
-      this.datacolletion = {
+      this.datacollection = {
         labels: ["qwe","asd","zxc"],
         datasets: [
         {
