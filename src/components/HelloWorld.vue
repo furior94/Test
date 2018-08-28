@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import rawdata from "./datos.js"
+console.log(rawdata)
 import PieChart from "./PieChart.js"
 export default {
   components: {
@@ -14,7 +16,7 @@ export default {
   },
   data () {
     return {
-      datacolletion: 0
+      datacollection: 0
     }
   },
   mounted () {
@@ -22,7 +24,7 @@ export default {
   },
   methods: {
     fillData () {
-      this.datacolletion = {
+      this.datacollection = {
         labels: ["qwe","asd","zxc"],
         datasets: [
         {
@@ -81,8 +83,8 @@ export default {
 </script>
 
 <style>
-  /* .small {
+  .small {
     max-width: 600px;
     margin:  150px auto;
-  } */
+  }
 </style>
