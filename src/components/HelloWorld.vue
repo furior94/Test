@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import rawdata from "./datos.js"
+console.log(rawdata)
 import PieChart from "./PieChart.js"
 export default {
   components: {
@@ -81,8 +83,8 @@ export default {
 </script>
 
 <style>
-  /* .small {
+  .small {
     max-width: 600px;
     margin:  150px auto;
-  } */
+  }
 </style>

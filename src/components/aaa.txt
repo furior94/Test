@@ -1,0 +1,21 @@
+    //console.log(response.data)
+    // var datos = JSON.stringify(response.data)
+    // response.data.forEach(function(item){
+    //     array.push(item.name + "<br>")
+    // })
+    // //console.log(array)
+    // //document.getElementById("demo").innerHTML = array
+    // rawdata.forEach(function(item){
+    //     fillimit.push(item.fill_limit +"<br>")
+//     })
+//     //document.getElementById("demo2").innerHTML = fillimit
+//     //document.getElementById("demo3").innerHTML = aaa
+// })
+//.catch((e)=> console.log(e))
+
+// export default {
+//     name: rawdata,
+//     data () {
+//       return {}
+//     }
+// }
