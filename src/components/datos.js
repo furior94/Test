@@ -6,11 +6,6 @@ var fillimit = []
 axios.get("https://steembottracker.net/bid_bots")
 .then((response)=> {
     rawdata = response.data
-    //console.log(response.data)
-    export default {
-        name: rawdata,
-        components: {
-            rawdata
-        }
-    }
+    //console.log(rawdata)
 })
+module.exports = {rawdata};
