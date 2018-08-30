@@ -1,0 +1,12 @@
+function test () {
+    return new Promise(function(resolve,reject) {
+        functionAsyncronica()
+        .then((resultado)=>{
+            resolve(resultado)
+        })
+        .catch((e)=>{
+            console.log(e)
+            test()
+        }))
+    })
+}
